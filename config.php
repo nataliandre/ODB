@@ -1,8 +1,8 @@
 <?php
-define("DB_HOSTNAME", 'umr1.mysql.ukraine.com.ua');
-define('DB_USERNAME', 'umr1_cam');
-define('DB_PASSWORD', '7paqbzxc');
-define('DB_DATABASE', 'umr1_cam');
-define('DB_PREFIX','as_');
+define("DB_HOSTNAME", 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '1111');
+define('DB_DATABASE', 'basename');
+define('DB_PREFIX','ODB_');
 
 ?>

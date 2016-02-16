@@ -16,10 +16,9 @@
         
         
         
-        
         public function get($args,$conditions = ''){
-	        $args = ($args!="*") ? implode(",", $args) : '*';
-	        $table = $this->table;
+	        $args = ($args!="*") ? $this->executeArgs($args) : '*';
+			$table = $this->table;
 	        $entities = DB_PREFIX.'entity';
 	        $SQL = "SELECT $args 
 	        	   FROM $table AS a
@@ -35,7 +34,14 @@
         public function executeConditions($conditions){
 	        
         }
-      
+        
+        
+        public function executeArgs($args){
+	       	for($i=0;$i<count($args);$i++){
+		        $args[$i]= $args[$i].'.a'; 
+	        }
+	        return implode(",", $args);
+        }
       
       
       
