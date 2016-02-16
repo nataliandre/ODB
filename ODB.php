@@ -43,7 +43,7 @@
 			     unset($args[$i]);
 			     continue;  
 			    }
-		        $args[$i]= 'a.'$args[$i]; 
+		        $args[$i]= 'a.'.$args[$i]; 
 	        }
 	        return implode(",", $args);
         }
