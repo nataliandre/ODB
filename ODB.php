@@ -37,7 +37,12 @@
         
         
         public function executeArgs($args){
+	        sort($args);
 	       	for($i=0;$i<count($args);$i++){
+		       	if(empty($args[$i])){
+			     unset($args[$i]);
+			     continue;  
+			    }
 		        $args[$i]= $args[$i].'.a'; 
 	        }
 	        return implode(",", $args);
